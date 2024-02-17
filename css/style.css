@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@keyframes Start {
+    from{
+        -webkit-text-stroke: 1px #0a173a;
+        text-shadow: -4px -2px 1px #FFFFFF99;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Rubik, sans-serif;
+}
+
+#logo{
+    display: flex;
+    width: 99.1vw;
+    height: 26vh;
+    justify-content: center;
+    background-color: #99999955;
+    font-size: 60px;
+    gap: 10px;
+    color: #543258
+}
+
+.polygon{
+    display: flex;
+    width: 300px;
+    height: 210px;
+    border-radius: 200px;
+    background-color: rgba(220,20,60,.7);
+    clip-path: ellipse(100% 100%);
+    position: relative;
+    transition: 1.7s;
+    border: 6px solid #111111;
+    margin-top: 10px;
+}
+
+.polygon:hover{
+    box-shadow: inset 2px 2px 1px #FFFFFFCC,
+                inset -2px -2px 1px #FFFFFFCC,
+                inset -2px 2px 1px #FFFFFFCC,
+                inset 2px -2px 1px #FFFFFFCC;
+                 ;
+
+}
+
+.logoDust{
+    letter-spacing: 4px;
+    transition: 1.7s;
+    animation: Start 2s reverse;
+    position: absolute;
+    left: 75px;
+    top: 2px;
+    font-weight: 500;
+    -webkit-text-stroke: 1px #FFFFFF;
+    text-shadow: -4px -1px 1px #54325899;
+}
+
+.logoDust:hover{
+    -webkit-text-stroke: 1px #0a173a;
+    text-shadow: -4px -1px 1px #FFFFFF99;
+}
+
+.logoDust::before{
+    content: '🍃';
+    font-size: 50px;
+    position: absolute;
+    left: 120px;
+    top: 70px;
+}
+
+
+.logoOf{
+    font-size: 70px;
+    letter-spacing: 6px;
+    animation: Start 2s reverse;
+    transition: 1.7s;
+
+    position: absolute;
+    left: 123px;
+    top: 65px;
+
+    -webkit-text-stroke: 1px #FFFFFF;
+    text-shadow: -4px -5px 1px #54325899;
+}
+
+.logoOf:hover{
+    -webkit-text-stroke: 1px #0a173a;
+    text-shadow: -3px -5px 1px #FFFFFF99;
+}
+
+.logoOf::after{
+    content: "f";
+    font-size: 35px;
+    position: relative;
+    right: 7px;
+    bottom: 13px;
+    font-weight: 500;
+}
+
+.logoAlley{
+    letter-spacing: 6px;
+    animation: Start 2s reverse;
+    transition: 1.7s;
+
+    position: absolute;
+    left: 70px;
+    top: 132px;
+
+    font-weight: 500;
+    -webkit-text-stroke: 1px #FFFFFF;
+    text-shadow: -4px -1px 1px #54325899;
+}
+
+.logoAlley::after{
+    content: '👚';
+    font-size: 50px;
+    position: absolute;
+    bottom: 70px;
+    right: 120px;
+}
+
+.logoAlley:hover{
+    -webkit-text-stroke: 1px #0a173a;
+    text-shadow: -4px -1px 1px #FFFFFF99;
+}
+
+.searchBox{
+    padding-top: 30px;
+    background-color: #99999955;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+label{
+    position: absolute;
+    font-size: 30px;
+    transform: scalex(1);
+    z-index: 1;
+    top: 270px;
+    left: 735px;
+    cursor: pointer;
+    transition: font-size 1s;
+}
+
+label:hover{
+    font-size: 37px;
+}
+
+input{
+    position: relative;
+    font-size: 30px;
+}
+
+.filters{
+    background-color:#99999955;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+.filters h2{
+    padding: 10px 20px;
+    background-color:rgba(220,20,60,.7);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.container{
+    font-size: 25px;
+    width: 2300;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: #99999955;
+}
+
+.products{
+    padding: 32px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.item{
+    background: #f9f8fc;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+.itemProduct{
+    padding: 8px 16px;
+}
+
+.item .itemTitle{
+    font-size: 32px;
+}
+
+.itemDescription{
+    font-size: 22px;
+    text-align: justify;
+}
+
+.itemTitle,
+.itemPriceAndRatingBox,
+.itemDescription,
+.itemCategory{
+    padding: 10px 32px;
+}
+
+.itemCategory::first-letter{
+    text-transform: uppercase;
+}
+
+.itemPriceAndRatingBox{
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemPrice{
+    font-size: 33px;
+}
+
+.itemPrice::before{
+    content:'$';
+    font-size: 15px;
+    transition: font-size 0.7s;
+}
+
+.itemPrice:hover::before{
+    font-size: 20px;
+}
+
+.itemRating::before{
+    content: '12';
+    color: transparent;
+    font-size: 15px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-image: linear-gradient(to right, gray 0%, gray 50%, gray 50%, gray 100%);
+    background-color: gray;
+    background-size: 0;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: background-size 2.2s, 
+                font-size 0.7s;
+}
+
+.itemRating:hover::before{
+    font-size: 27px;
+    background-size: 100%;
+    background-position: left;
+    background-image: linear-gradient(to right, gold 0%, gold 70%, gray 30%, gray 100%);
+}
+
+.addCartBox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemCount{
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.addToCart{
+    text-decoration: none;
+    background-color: rgba(220,20,60, 0.9);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #f9f8fc;
+    font-size: 30px;
+    transition: font-size 1.2s;
+}
+
+.addToCart:hover{
+    font-size: 40px;
+}
